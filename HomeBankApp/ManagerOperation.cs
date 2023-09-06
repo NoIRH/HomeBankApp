@@ -1,4 +1,5 @@
-﻿
+﻿using ScottPlot;
+
 namespace HomeBankApp
 {
     internal static class ManagerOperation
