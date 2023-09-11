@@ -9,7 +9,7 @@ namespace HomeBankApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            numericUpDown1.Controls[0].Visible = false;
         }
     }
 }
