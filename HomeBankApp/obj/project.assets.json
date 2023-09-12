@@ -1409,24 +1409,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kikut\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\gorno\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Work\\University\\Programms\\CSharp\\HomeBankApp\\HomeBankApp\\HomeBankApp.csproj",
+      "projectUniqueName": "C:\\Users\\gorno\\Source\\Repos\\HomeBankApp\\HomeBankApp\\HomeBankApp.csproj",
       "projectName": "HomeBankApp",
-      "projectPath": "D:\\Work\\University\\Programms\\CSharp\\HomeBankApp\\HomeBankApp\\HomeBankApp.csproj",
-      "packagesPath": "C:\\Users\\kikut\\.nuget\\packages\\",
-      "outputPath": "D:\\Work\\University\\Programms\\CSharp\\HomeBankApp\\HomeBankApp\\obj\\",
+      "projectPath": "C:\\Users\\gorno\\Source\\Repos\\HomeBankApp\\HomeBankApp\\HomeBankApp.csproj",
+      "packagesPath": "C:\\Users\\gorno\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gorno\\Source\\Repos\\HomeBankApp\\HomeBankApp\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\kikut\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\gorno\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1434,7 +1429,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1481,7 +1475,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

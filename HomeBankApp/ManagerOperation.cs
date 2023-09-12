@@ -22,7 +22,7 @@ namespace HomeBankApp
             _manager.AddOperation(new Operation() { Value = value, Date = DateTime.Now });
         }
 
-        public static void RemoveMoney(double value) => AddMoney(value);
+        public static void RemoveMoney(double value) => AddMoney(-value);
 
     }
 }
