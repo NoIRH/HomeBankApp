@@ -18,15 +18,11 @@ namespace HomeBankApp
 
         public static void AddMoney(double value)
         {
-            if (value <= 0) throw new ArgumentException("Invalid value");
+            if (value == 0) throw new ArgumentException("Invalid value"); // Add an upper and lower bound to the value.
             _manager.AddOperation(new Operation() { Value = value, Date = DateTime.Now });
         }
 
-        public static void RemoveMoney(double value)
-        {
-            if (value >= 0) throw new ArgumentException("Invalid value");
-            _manager.RemoveOperation(new Operation() { Value = value, Date = DateTime.Now });
-        }
+        public static void RemoveMoney(double value) => AddMoney(value);
 
     }
 }
