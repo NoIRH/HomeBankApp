@@ -1415,11 +1415,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\demin\\Source\\Repos\\HomeBankApp\\HomeBankApp\\HomeBankApp.csproj",
+      "projectUniqueName": "C:\\Users\\demin\\source\\repos\\HomeBankApp\\HomeBankApp\\HomeBankApp.csproj",
       "projectName": "HomeBankApp",
-      "projectPath": "C:\\Users\\demin\\Source\\Repos\\HomeBankApp\\HomeBankApp\\HomeBankApp.csproj",
+      "projectPath": "C:\\Users\\demin\\source\\repos\\HomeBankApp\\HomeBankApp\\HomeBankApp.csproj",
       "packagesPath": "C:\\Users\\demin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\demin\\Source\\Repos\\HomeBankApp\\HomeBankApp\\obj\\",
+      "outputPath": "C:\\Users\\demin\\source\\repos\\HomeBankApp\\HomeBankApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1481,7 +1481,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
