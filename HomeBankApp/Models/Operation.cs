@@ -11,5 +11,6 @@ namespace HomeBankApp.Models
         public int Id { get; set; }
         public double Value { get; set; }
         public DateTime Date { get; set; }
+        public User User { get; set; }
     }
 }

@@ -14,7 +14,7 @@ namespace HomeBankApp
         public DbSet<Operation> Operations { get; set; } = null!;
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=helloapp.db");
+            optionsBuilder.UseSqlite("Data Source=homebank.db");
         }
     }
 }
