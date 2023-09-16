@@ -19,10 +19,10 @@ namespace HomeBankApp
         {
             if (inputField.Value == 0)
             {
-                MessageBox.Show("please enter not zero");
+                MessageBox.Show("Пожалуйста, введите ненулевое и положительное значение");
                 return;
             }
-            ManagerOperation.AddMoney(Convert.ToDouble(inputField.Value));
+            ManagerOperation.AddOperation(Convert.ToDouble(inputField.Value));
             UpdateView();
         }
 
@@ -30,16 +30,17 @@ namespace HomeBankApp
         {
             if (inputField.Value == 0)
             {
-                MessageBox.Show("please enter not zero");
+                MessageBox.Show("Пожалуйста, введите ненулевое и положительное значение");
                 return;
             }
-            ManagerOperation.AddMoney(-Convert.ToDouble(inputField.Value));
+            ManagerOperation.AddOperation(-Convert.ToDouble(inputField.Value));
             UpdateView();
         }
+
         private void UpdateView()
         {
             dataGridViewOpeartions.Rows.Clear();
-            foreach (var op in ManagerOperation.GetOperationsByCurrentMonth())
+            foreach (var op in ManagerOperation.GetOperationsForCurrentMonth().Reverse())
                 dataGridViewOpeartions.Rows.Add(op.Value, op.Date.ToString());
             outPutFirld.Text = ManagerOperation.GetTotalMoney().ToString();
         }
