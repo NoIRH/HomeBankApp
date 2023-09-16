@@ -19,7 +19,7 @@ namespace HomeBankApp
         {
             if (inputField.Value == 0)
             {
-                MessageBox.Show("Пожалуйста, введите ненулевое и положительное значение");
+                MessageBox.Show("РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІРІРµРґРёС‚Рµ РЅРµРЅСѓР»РµРІРѕРµ Рё РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ");
                 return;
             }
             ManagerOperation.AddOperation(Convert.ToDouble(inputField.Value));
@@ -30,7 +30,7 @@ namespace HomeBankApp
         {
             if (inputField.Value == 0)
             {
-                MessageBox.Show("Пожалуйста, введите ненулевое и положительное значение");
+                MessageBox.Show("РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІРІРµРґРёС‚Рµ РЅРµРЅСѓР»РµРІРѕРµ Рё РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ");
                 return;
             }
             ManagerOperation.AddOperation(-Convert.ToDouble(inputField.Value));
