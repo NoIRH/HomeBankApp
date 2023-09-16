@@ -1,6 +1,4 @@
 ﻿using HomeBankApp.Models;
-using ScottPlot;
-
 
 namespace HomeBankApp
 {
@@ -8,29 +6,38 @@ namespace HomeBankApp
     {
         private static DbManager _manager = new DbManager();
 
-        public static IEnumerable<Operation> GetOperationsByCurrentMonth() => _manager.GetOperations().Where(op => op.Date.Month == DateTime.Now.Month);
+        private static List<(int monthNumber, double sumOfMonth)> GetOperationsForCurrentYearByExpression(Predicate<Operation> expression)
+        {
+            if (expression == null) throw new NullReferenceException("Expression is null");
+            int numberOfMonths = 12;
+            var amountsByMonth = new List<(int monthNumber, double sumOfMonth)>();
+            for (int i = 1; i < numberOfMonths + 1; i++)
+            {
+                var amountInCurrentMonth = _manager.GetOperations().Where(op => op.Date.Month == i && expression(op)).Sum(op => op.Value);
+                if (amountInCurrentMonth != 0)
+                    amountsByMonth.Add((i, amountInCurrentMonth));
+            }
+            return amountsByMonth;
+        }
 
-        //fix this methods for years.
-        public static IEnumerable<Operation> GetOperationsByCurrentYearAdd() => _manager.GetOperations().Where(op => op.Date.Year == DateTime.Now.Year && op.Value > 0);
+        public static List<(int monthNumber, double sumOfMonth)> GetOperationsForCurrentYearPositive() => GetOperationsForCurrentYearByExpression((Operation op) => op.Value > 0);
 
-        public static IEnumerable<Operation> GetOperationsByCurrentYearRemove() => _manager.GetOperations().Where(op => op.Date.Year == DateTime.Now.Year && op.Value < 0);
+        public static List<(int monthNumber, double sumOfMonth)> GetOperationsForCurrentYearNegative() => GetOperationsForCurrentYearByExpression((Operation op) => op.Value < 0);
+
+        public static IEnumerable<Operation> GetOperationsForCurrentMonth() => _manager.GetOperations().Where(op => op.Date.Month == DateTime.Now.Month);
 
         public static double GetTotalMoney() => _manager.GetOperations().Sum(op => op.Value);
 
-
-        // rename on addoperation and 
-        public static void AddMoney(double value)
+        public static void AddOperation(double value)
         {
-            if (value == 0) throw new ArgumentException("Invalid value"); // Add an upper and lower bound to the value.
-            _manager.AddOperation(
-                new Operation() 
-                    {   Value = value,
-                        Date = DateTime.Now,
-                        User = _manager.GetAdmin()
-                });
+            if (value == 0) throw new ArgumentException("Invalid value. The value is zero.");
+            _manager.AddOperation(new Operation()
+            {
+                Value = value,
+                Date = DateTime.Now,
+                User = _manager.GetAdmin()
+            });
         }
-        // need delete  this method
-        public static void RemoveMoney(double value) => AddMoney(-value);
 
     }
 }
