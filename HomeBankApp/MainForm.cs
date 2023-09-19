@@ -1,4 +1,6 @@
 
+using ScottPlot;
+
 namespace HomeBankApp
 {
     public partial class MainForm : Form
@@ -46,6 +48,21 @@ namespace HomeBankApp
 
         private void buttonYearStatistic_Click(object sender, EventArgs e)
         {
+            var negative = ManagerOperation.GetOperationsForCurrentYearNegative().Select(x => x.sumOfMonth).ToArray();
+            var negativeDate = ManagerOperation.
+                GetOperationsForCurrentYearNegative().
+                Select(x => new DateTime(DateTime.Now.Year, x.monthNumber, 1).ToOADate()).ToArray();
+            var positive = ManagerOperation.GetOperationsForCurrentYearPositive().Select(x => x.sumOfMonth).ToArray();
+            var positiveDate = ManagerOperation.
+                GetOperationsForCurrentYearPositive().
+                Select(x => new DateTime(DateTime.Now.Year, x.monthNumber, 1).ToOADate()).ToArray();
+            plotField.Plot.AddScatter(negativeDate, negative);
+            plotField.Plot.AddScatter(positiveDate, positive);
+            plotField.Plot.XAxis.DateTimeFormat(true);
+            plotField.Plot.XLabel("Дата");
+            plotField.Plot.YLabel("Рубли");
+            plotField.Plot.Title("Статистика за текущий год");
+            plotField.Refresh();
 
         }
     }
