@@ -9,13 +9,15 @@ namespace HomeBankApp
         private static List<(int monthNumber, double sumOfMonth)> GetOperationsForCurrentYearByExpression(Predicate<Operation> expression)
         {
             if (expression == null) throw new NullReferenceException("Expression is null");
+            int startMonth = _manager.GetMinDate().Month - 1; // Range from 0 to 11.
             int numberOfMonths = 12;
             var amountsByMonth = new List<(int monthNumber, double sumOfMonth)>();
-            for (int i = 1; i < numberOfMonths + 1; i++)
+            for (int i = 0; i < numberOfMonths; i++)
             {
-                var amountInCurrentMonth = _manager.GetOperations().Where(op => op.Date.Month == i && expression(op)).Sum(op => op.Value);
+                int currentMonth = (startMonth + i) % numberOfMonths + 1;
+                double amountInCurrentMonth = _manager.GetOperations().Where(op => op.Date.Month == currentMonth && expression(op)).Sum(op => op.Value);
                 if (amountInCurrentMonth != 0)
-                    amountsByMonth.Add((i, amountInCurrentMonth));
+                    amountsByMonth.Add((currentMonth, amountInCurrentMonth));
             }
             return amountsByMonth;
         }

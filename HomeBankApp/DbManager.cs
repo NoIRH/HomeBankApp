@@ -20,15 +20,19 @@ namespace HomeBankApp
             Context.Operations.Load();
             CreateAdmin();
         }
+
         private void CreateAdmin()
         {
             if(Context.Users.FirstOrDefault(x =>x.Role == 0) == null)
                 AddUser(new User { Name = "admin", Password = "admin", Role = 0 });
         }
+
         public User GetAdmin() => Context.Users.FirstOrDefault(x => x.Role == 0);
+
         public IEnumerable<User> GetUsers() => Context.Users;
 
         public IEnumerable<Operation> GetOperations() => Context.Operations;
+
         public DateTime GetMinDate() => Context.Operations.Select(x => x.Date).Min();
 
         public void AddUser(User user)
