@@ -30,13 +30,13 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            dataGridViewOpeartions = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             tableLayoutPanel1 = new TableLayoutPanel();
-            panel1 = new Panel();
+            dataGridViewOpeartions = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            tableLayoutPanel4 = new TableLayoutPanel();
             groupBoxTotalSum = new GroupBox();
             outPutFirld = new TextBox();
             groupBoxInput = new GroupBox();
@@ -57,13 +57,11 @@
             groupBox2 = new GroupBox();
             numericUpDown1 = new NumericUpDown();
             groupBox3 = new GroupBox();
-            button1 = new Button();
-            button2 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewOpeartions).BeginInit();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
-            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewOpeartions).BeginInit();
+            tableLayoutPanel4.SuspendLayout();
             groupBoxTotalSum.SuspendLayout();
             groupBoxInput.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)inputField).BeginInit();
@@ -74,8 +72,46 @@
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            groupBox3.SuspendLayout();
             SuspendLayout();
+            // 
+            // tabControl1
+            // 
+            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Dock = DockStyle.Fill;
+            tabControl1.Location = new Point(0, 0);
+            tabControl1.Margin = new Padding(4);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(888, 531);
+            tabControl1.TabIndex = 9;
+            // 
+            // tabPage1
+            // 
+            tabPage1.Controls.Add(tableLayoutPanel1);
+            tabPage1.Location = new Point(4, 30);
+            tabPage1.Margin = new Padding(4);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(4);
+            tabPage1.Size = new Size(880, 497);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "Счёт";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel1
+            // 
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel1.Controls.Add(dataGridViewOpeartions, 0, 1);
+            tableLayoutPanel1.Controls.Add(tableLayoutPanel4, 0, 0);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(4, 4);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 130F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle());
+            tableLayoutPanel1.Size = new Size(872, 489);
+            tableLayoutPanel1.TabIndex = 0;
             // 
             // dataGridViewOpeartions
             // 
@@ -103,7 +139,7 @@
             dataGridViewOpeartions.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewOpeartions.Dock = DockStyle.Fill;
             dataGridViewOpeartions.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dataGridViewOpeartions.Location = new Point(3, 103);
+            dataGridViewOpeartions.Location = new Point(3, 133);
             dataGridViewOpeartions.Name = "dataGridViewOpeartions";
             dataGridViewOpeartions.RowHeadersVisible = false;
             dataGridViewOpeartions.RowHeadersWidth = 51;
@@ -123,64 +159,31 @@
             Column2.MinimumWidth = 6;
             Column2.Name = "Column2";
             // 
-            // tabControl1
+            // tableLayoutPanel4
             // 
-            tabControl1.Controls.Add(tabPage1);
-            tabControl1.Controls.Add(tabPage2);
-            tabControl1.Dock = DockStyle.Fill;
-            tabControl1.Location = new Point(0, 0);
-            tabControl1.Margin = new Padding(4);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(888, 542);
-            tabControl1.TabIndex = 9;
-            // 
-            // tabPage1
-            // 
-            tabPage1.Controls.Add(tableLayoutPanel1);
-            tabPage1.Location = new Point(4, 30);
-            tabPage1.Margin = new Padding(4);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(4);
-            tabPage1.Size = new Size(880, 508);
-            tabPage1.TabIndex = 0;
-            tabPage1.Text = "Счёт";
-            tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel1
-            // 
-            tableLayoutPanel1.ColumnCount = 1;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
-            tableLayoutPanel1.Controls.Add(dataGridViewOpeartions, 0, 1);
-            tableLayoutPanel1.Controls.Add(panel1, 0, 0);
-            tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(4, 4);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 2;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 80F));
-            tableLayoutPanel1.Size = new Size(872, 500);
-            tableLayoutPanel1.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(groupBoxTotalSum);
-            panel1.Controls.Add(groupBoxInput);
-            panel1.Controls.Add(groupBoxOperation);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(3, 3);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(867, 94);
-            panel1.TabIndex = 1;
+            tableLayoutPanel4.ColumnCount = 3;
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 300F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel4.Controls.Add(groupBoxTotalSum, 0, 0);
+            tableLayoutPanel4.Controls.Add(groupBoxInput, 0, 0);
+            tableLayoutPanel4.Controls.Add(groupBoxOperation, 0, 0);
+            tableLayoutPanel4.Dock = DockStyle.Fill;
+            tableLayoutPanel4.Location = new Point(3, 3);
+            tableLayoutPanel4.Name = "tableLayoutPanel4";
+            tableLayoutPanel4.RowCount = 1;
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel4.Size = new Size(867, 124);
+            tableLayoutPanel4.TabIndex = 1;
             // 
             // groupBoxTotalSum
             // 
             groupBoxTotalSum.Controls.Add(outPutFirld);
-            groupBoxTotalSum.Dock = DockStyle.Right;
-            groupBoxTotalSum.Location = new Point(563, 0);
+            groupBoxTotalSum.Dock = DockStyle.Fill;
+            groupBoxTotalSum.Location = new Point(586, 3);
             groupBoxTotalSum.Name = "groupBoxTotalSum";
-            groupBoxTotalSum.Size = new Size(304, 94);
-            groupBoxTotalSum.TabIndex = 4;
+            groupBoxTotalSum.Size = new Size(278, 118);
+            groupBoxTotalSum.TabIndex = 7;
             groupBoxTotalSum.TabStop = false;
             groupBoxTotalSum.Text = "Общая сумма за месяц";
             // 
@@ -188,19 +191,20 @@
             // 
             outPutFirld.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             outPutFirld.Enabled = false;
-            outPutFirld.Location = new Point(6, 40);
+            outPutFirld.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            outPutFirld.Location = new Point(19, 50);
             outPutFirld.Name = "outPutFirld";
-            outPutFirld.Size = new Size(287, 29);
+            outPutFirld.Size = new Size(242, 35);
             outPutFirld.TabIndex = 0;
             // 
             // groupBoxInput
             // 
             groupBoxInput.Controls.Add(inputField);
             groupBoxInput.Dock = DockStyle.Fill;
-            groupBoxInput.Location = new Point(268, 0);
+            groupBoxInput.Location = new Point(303, 3);
             groupBoxInput.Name = "groupBoxInput";
-            groupBoxInput.Size = new Size(599, 94);
-            groupBoxInput.TabIndex = 3;
+            groupBoxInput.Size = new Size(277, 118);
+            groupBoxInput.TabIndex = 6;
             groupBoxInput.TabStop = false;
             groupBoxInput.Text = "Поле ввода";
             // 
@@ -208,28 +212,29 @@
             // 
             inputField.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             inputField.DecimalPlaces = 2;
-            inputField.Location = new Point(6, 41);
+            inputField.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            inputField.Location = new Point(15, 50);
             inputField.Maximum = new decimal(new int[] { 1215752192, 23, 0, 0 });
             inputField.Name = "inputField";
-            inputField.Size = new Size(256, 29);
+            inputField.Size = new Size(240, 35);
             inputField.TabIndex = 0;
             // 
             // groupBoxOperation
             // 
             groupBoxOperation.Controls.Add(buttonRemoveMoney);
             groupBoxOperation.Controls.Add(buttonAddMoney);
-            groupBoxOperation.Dock = DockStyle.Left;
-            groupBoxOperation.Location = new Point(0, 0);
+            groupBoxOperation.Dock = DockStyle.Fill;
+            groupBoxOperation.Location = new Point(3, 3);
             groupBoxOperation.Name = "groupBoxOperation";
-            groupBoxOperation.Size = new Size(268, 94);
-            groupBoxOperation.TabIndex = 2;
+            groupBoxOperation.Size = new Size(294, 118);
+            groupBoxOperation.TabIndex = 5;
             groupBoxOperation.TabStop = false;
             groupBoxOperation.Text = "Операции";
             // 
             // buttonRemoveMoney
             // 
             buttonRemoveMoney.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonRemoveMoney.Location = new Point(127, 33);
+            buttonRemoveMoney.Location = new Point(154, 45);
             buttonRemoveMoney.Name = "buttonRemoveMoney";
             buttonRemoveMoney.Size = new Size(117, 48);
             buttonRemoveMoney.TabIndex = 1;
@@ -239,9 +244,9 @@
             // 
             // buttonAddMoney
             // 
-            buttonAddMoney.Location = new Point(17, 33);
+            buttonAddMoney.Location = new Point(21, 45);
             buttonAddMoney.Name = "buttonAddMoney";
-            buttonAddMoney.Size = new Size(94, 48);
+            buttonAddMoney.Size = new Size(117, 48);
             buttonAddMoney.TabIndex = 0;
             buttonAddMoney.Text = "Внести";
             buttonAddMoney.UseVisualStyleBackColor = true;
@@ -250,11 +255,11 @@
             // tabPage2
             // 
             tabPage2.Controls.Add(tableLayoutPanel3);
-            tabPage2.Location = new Point(4, 30);
+            tabPage2.Location = new Point(4, 24);
             tabPage2.Margin = new Padding(4);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(4);
-            tabPage2.Size = new Size(880, 508);
+            tabPage2.Size = new Size(880, 503);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Статистика";
             tabPage2.UseVisualStyleBackColor = true;
@@ -272,7 +277,7 @@
             tableLayoutPanel3.RowCount = 2;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 90F));
-            tableLayoutPanel3.Size = new Size(872, 500);
+            tableLayoutPanel3.Size = new Size(872, 495);
             tableLayoutPanel3.TabIndex = 0;
             // 
             // buttonYearStatistic
@@ -280,7 +285,7 @@
             buttonYearStatistic.Dock = DockStyle.Left;
             buttonYearStatistic.Location = new Point(3, 3);
             buttonYearStatistic.Name = "buttonYearStatistic";
-            buttonYearStatistic.Size = new Size(224, 44);
+            buttonYearStatistic.Size = new Size(224, 43);
             buttonYearStatistic.TabIndex = 0;
             buttonYearStatistic.Text = "Текущий год";
             buttonYearStatistic.UseVisualStyleBackColor = true;
@@ -289,10 +294,10 @@
             // formsPlot1
             // 
             formsPlot1.Dock = DockStyle.Fill;
-            formsPlot1.Location = new Point(5, 54);
+            formsPlot1.Location = new Point(5, 53);
             formsPlot1.Margin = new Padding(5, 4, 5, 4);
             formsPlot1.Name = "formsPlot1";
-            formsPlot1.Size = new Size(862, 442);
+            formsPlot1.Size = new Size(862, 438);
             formsPlot1.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -374,8 +379,6 @@
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(button1);
-            groupBox3.Controls.Add(button2);
             groupBox3.Dock = DockStyle.Left;
             groupBox3.Location = new Point(0, 0);
             groupBox3.Name = "groupBox3";
@@ -384,44 +387,24 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Операции";
             // 
-            // button1
-            // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button1.Location = new Point(195, 33);
-            button1.Name = "button1";
-            button1.Size = new Size(117, 48);
-            button1.TabIndex = 1;
-            button1.Text = "Потратить";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += buttonRemoveMoney_Click;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(17, 33);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 48);
-            button2.TabIndex = 0;
-            button2.Text = "Внести";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += buttonAddMoney_Click;
-            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(888, 542);
+            ClientSize = new Size(888, 531);
             Controls.Add(tabControl1);
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(4, 3, 4, 3);
+            MinimumSize = new Size(904, 285);
             Name = "MainForm";
             Text = "Мой домашний банк";
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridViewOpeartions).EndInit();
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
-            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridViewOpeartions).EndInit();
+            tableLayoutPanel4.ResumeLayout(false);
             groupBoxTotalSum.ResumeLayout(false);
             groupBoxTotalSum.PerformLayout();
             groupBoxInput.ResumeLayout(false);
@@ -434,7 +417,6 @@
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-            groupBox3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -442,18 +424,6 @@
         private TabControl tabControl1;
         private TabPage tabPage1;
         private TabPage tabPage2;
-        private TableLayoutPanel tableLayoutPanel1;
-        private DataGridView dataGridViewOpeartions;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private Panel panel1;
-        private GroupBox groupBoxOperation;
-        private Button buttonRemoveMoney;
-        private Button buttonAddMoney;
-        private GroupBox groupBoxTotalSum;
-        private TextBox outPutFirld;
-        private GroupBox groupBoxInput;
-        private NumericUpDown inputField;
         private TableLayoutPanel tableLayoutPanel3;
         private Button buttonYearStatistic;
         private ScottPlot.FormsPlot formsPlot1;
@@ -466,7 +436,17 @@
         private GroupBox groupBox2;
         private NumericUpDown numericUpDown1;
         private GroupBox groupBox3;
-        private Button button1;
-        private Button button2;
+        private TableLayoutPanel tableLayoutPanel1;
+        private DataGridView dataGridViewOpeartions;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private TableLayoutPanel tableLayoutPanel4;
+        private GroupBox groupBoxTotalSum;
+        private TextBox outPutFirld;
+        private GroupBox groupBoxInput;
+        private NumericUpDown inputField;
+        private GroupBox groupBoxOperation;
+        private Button buttonRemoveMoney;
+        private Button buttonAddMoney;
     }
 }
