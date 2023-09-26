@@ -8,6 +8,7 @@ namespace HomeBankApp
 {
     public partial class MainForm : Form
     {
+        //комментарий от гоши
         public MainForm()
         {
             InitializeComponent();
