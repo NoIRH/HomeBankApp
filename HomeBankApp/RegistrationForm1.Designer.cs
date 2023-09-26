@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label2 = new Label();
+            Authorization_label = new Label();
             button1 = new Button();
             PasswordText = new TextBox();
             LoginText = new TextBox();
@@ -43,15 +43,18 @@
             panel2.SuspendLayout();
             SuspendLayout();
             // 
-            // label2
+            // Authorization_label
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(174, 404);
-            label2.Name = "label2";
-            label2.Size = new Size(121, 20);
-            label2.TabIndex = 6;
-            label2.Text = "Авторизоваться";
-            label2.MouseClick += label2_MouseClick;
+            Authorization_label.AutoSize = true;
+            Authorization_label.Cursor = Cursors.Hand;
+            Authorization_label.Location = new Point(174, 404);
+            Authorization_label.Name = "Authorization_label";
+            Authorization_label.Size = new Size(121, 20);
+            Authorization_label.TabIndex = 6;
+            Authorization_label.Text = "Авторизоваться";
+            Authorization_label.MouseClick += Authorization_label_MouseClick;
+            Authorization_label.MouseEnter += Authorization_label_MouseEnter;
+            Authorization_label.MouseLeave += Authorization_label_MouseLeave;
             // 
             // button1
             // 
@@ -102,7 +105,7 @@
             // panel1
             // 
             panel1.BackColor = Color.Silver;
-            panel1.Controls.Add(label2);
+            panel1.Controls.Add(Authorization_label);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(PasswordText);
             panel1.Controls.Add(LoginText);
@@ -156,7 +159,7 @@
 
         #endregion
 
-        private Label label2;
+        private Label Authorization_label;
         private Button button1;
         private TextBox PasswordText;
         private TextBox LoginText;

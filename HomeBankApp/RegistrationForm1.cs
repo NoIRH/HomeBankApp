@@ -21,16 +21,26 @@ namespace HomeBankApp
 
         private void RegistrationForm1_Load(object sender, EventArgs e)
         {
-            this.Width = 493;
-            this.Height = 493;
-
+            Application.Exit();
         }
 
-        private void label2_MouseClick(object sender, MouseEventArgs e)
+
+
+        private void Authorization_label_MouseClick(object sender, MouseEventArgs e)
         {
             this.Hide();
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
+        }
+
+        private void Authorization_label_MouseEnter(object sender, EventArgs e)
+        {
+            Authorization_label.ForeColor = Color.White;
+        }
+
+        private void Authorization_label_MouseLeave(object sender, EventArgs e)
+        {
+            Authorization_label.ForeColor = Color.Black;
         }
     }
 }

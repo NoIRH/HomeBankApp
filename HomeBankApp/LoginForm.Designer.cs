@@ -63,12 +63,16 @@
             // Registrlable
             // 
             Registrlable.AutoSize = true;
+            Registrlable.Cursor = Cursors.Hand;
             Registrlable.Location = new Point(158, 404);
             Registrlable.Name = "Registrlable";
             Registrlable.Size = new Size(151, 20);
             Registrlable.TabIndex = 6;
             Registrlable.Text = "Зарегистрироваться";
+            Registrlable.Click += Registrlable_Click;
             Registrlable.MouseClick += Registrable_MouseClick;
+            Registrlable.MouseEnter += Registrlable_MouseEnter;
+            Registrlable.MouseLeave += Registrlable_MouseLeave;
             // 
             // button1
             // 
@@ -145,6 +149,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(475, 446);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "LoginForm";
             Text = "LoginForm";
             Load += LoginForm_Load;

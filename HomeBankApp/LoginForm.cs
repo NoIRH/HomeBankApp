@@ -49,7 +49,22 @@ namespace HomeBankApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+
+        }
+
+        private void Registrlable_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Registrlable_MouseEnter(object sender, EventArgs e)
+        {
+            Registrlable.ForeColor = Color.White;
+        }
+
+        private void Registrlable_MouseLeave(object sender, EventArgs e)
+        {
+            Registrlable.ForeColor = Color.Black;
         }
     }
 }

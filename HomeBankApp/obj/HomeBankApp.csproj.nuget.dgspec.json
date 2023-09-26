@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gorno\\source\\repos\\HomeBankApp\\HomeBankApp\\HomeBankApp.csproj": {}
+    "C:\\Users\\gorno\\Source\\Repos\\HomeBankApp\\HomeBankApp\\HomeBankApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gorno\\source\\repos\\HomeBankApp\\HomeBankApp\\HomeBankApp.csproj": {
+    "C:\\Users\\gorno\\Source\\Repos\\HomeBankApp\\HomeBankApp\\HomeBankApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gorno\\source\\repos\\HomeBankApp\\HomeBankApp\\HomeBankApp.csproj",
+        "projectUniqueName": "C:\\Users\\gorno\\Source\\Repos\\HomeBankApp\\HomeBankApp\\HomeBankApp.csproj",
         "projectName": "HomeBankApp",
-        "projectPath": "C:\\Users\\gorno\\source\\repos\\HomeBankApp\\HomeBankApp\\HomeBankApp.csproj",
+        "projectPath": "C:\\Users\\gorno\\Source\\Repos\\HomeBankApp\\HomeBankApp\\HomeBankApp.csproj",
         "packagesPath": "C:\\Users\\gorno\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\gorno\\source\\repos\\HomeBankApp\\HomeBankApp\\obj\\",
         "projectStyle": "PackageReference",
