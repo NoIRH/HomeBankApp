@@ -1,4 +1,5 @@
-﻿using HomeBankApp.Interfaces;
+﻿using HomeBankApp.Contexts;
+using HomeBankApp.Interfaces;
 using HomeBankApp.Models;
 using System;
 using System.Collections.Generic;
@@ -10,49 +11,55 @@ namespace HomeBankApp.Managers
 {
     public class FileStorageManager : IDataStorageManager
     {
-        public void AddOperation(Operation operation)
+        public FileContext Context { get; set; }
+        public FileStorageManager() 
         {
-            throw new NotImplementedException();
+            Context = new FileContext();
+            // open o create file
+            
+            CreateAdmin();
         }
+        private void CreateAdmin()
+        {
+            if (Context.Users.FirstOrDefault(x => x.Role == 0) == null)
+                AddUser(new User { Name = "admin", Password = "admin", Role = 0 });
+        }
+
+        public User GetAdmin() => Context.Users.FirstOrDefault(x => x.Role == 0);
+
+        public IEnumerable<User> GetUsers() => Context.Users;
+
+        public IEnumerable<Operation> GetOperations() => Context.Operations;
+
+        public DateTime GetMinDate() => Context.Operations.Select(x => x.Date).Min();
 
         public void AddUser(User user)
         {
-            throw new NotImplementedException();
-        }
-
-        public User GetAdmin()
-        {
-            throw new NotImplementedException();
-        }
-
-        public DateTime GetMinDate()
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Operation> GetOperations()
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<User> GetUsers()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void RemoveOperation(Operation operation)
-        {
-            throw new NotImplementedException();
+            Context.Users.Add(user);
+            SaveChanges();
         }
 
         public void RemoveUser(User user)
         {
-            throw new NotImplementedException();
+            Context.Users.Remove(user);
+            SaveChanges();
+        }
+
+        public void AddOperation(Operation operation)
+        {
+            Context.Operations.Add(operation);
+            SaveChanges();
+        }
+
+        public void RemoveOperation(Operation operation)
+        {
+            Context.Operations.Remove(operation);
+            SaveChanges();
         }
 
         public void SaveChanges()
         {
-            throw new NotImplementedException();
+            // wait serializator 
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using HomeBankApp.Contexts;
+using HomeBankApp.Interfaces;
 using HomeBankApp.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace HomeBankApp.Managers
 {
-    public class DbManager
+    public class DbManager : IDataStorageManager
     {
        Contexts.ApplicationContext Context { get; set; }
 
