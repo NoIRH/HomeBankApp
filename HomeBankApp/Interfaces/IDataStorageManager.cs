@@ -24,7 +24,6 @@ namespace HomeBankApp.Interfaces
 
         public void AddOperation(Operation operation);
 
-
         public void RemoveOperation(Operation operation);
 
         public void SaveChanges();

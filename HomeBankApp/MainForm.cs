@@ -1,6 +1,8 @@
 
+using HomeBankApp.Contexts;
 using HomeBankApp.Managers;
 using ScottPlot;
+using System.Text.Json;
 
 namespace HomeBankApp
 {
@@ -65,7 +67,6 @@ namespace HomeBankApp
             plotField.Plot.YLabel("Рубли");
             plotField.Plot.Title("Статистика за текущий год");
             plotField.Refresh();
-
         }
     }
 }
