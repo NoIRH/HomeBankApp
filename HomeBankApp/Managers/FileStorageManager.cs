@@ -1,7 +1,6 @@
 ﻿using HomeBankApp.Contexts;
 using HomeBankApp.Interfaces;
 using HomeBankApp.Models;
-using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,19 +9,16 @@ using System.Threading.Tasks;
 
 namespace HomeBankApp.Managers
 {
-    public class DbManager : IDataStorageManager
+    public class FileStorageManager : IDataStorageManager
     {
-       Contexts.ApplicationContext Context { get; set; }
-
-        public DbManager()
+        public FileContext Context { get; set; }
+        public FileStorageManager() 
         {
-            Context = new Contexts.ApplicationContext();
-            Context.Database.EnsureCreated();
-            Context.Users.Load();
-            Context.Operations.Load();
+            Context = new FileContext();
+            // open o create file
+            
             CreateAdmin();
         }
-
         private void CreateAdmin()
         {
             if (Context.Users.FirstOrDefault(x => x.Role == 0) == null)
@@ -61,7 +57,9 @@ namespace HomeBankApp.Managers
             SaveChanges();
         }
 
-        public void SaveChanges() => Context.SaveChanges();
-
+        public void SaveChanges()
+        {
+            // wait serializator 
+        }
     }
 }
