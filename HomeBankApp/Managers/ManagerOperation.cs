@@ -1,6 +1,6 @@
 ﻿using HomeBankApp.Models;
 
-namespace HomeBankApp
+namespace HomeBankApp.Managers
 {
     public static class ManagerOperation
     {
@@ -22,9 +22,9 @@ namespace HomeBankApp
             return amountsByMonth;
         }
 
-        public static List<(int monthNumber, double sumOfMonth)> GetOperationsForCurrentYearPositive() => GetOperationsForCurrentYearByExpression((Operation op) => op.Value > 0);
+        public static List<(int monthNumber, double sumOfMonth)> GetOperationsForCurrentYearPositive() => GetOperationsForCurrentYearByExpression((op) => op.Value > 0);
 
-        public static List<(int monthNumber, double sumOfMonth)> GetOperationsForCurrentYearNegative() => GetOperationsForCurrentYearByExpression((Operation op) => op.Value < 0);
+        public static List<(int monthNumber, double sumOfMonth)> GetOperationsForCurrentYearNegative() => GetOperationsForCurrentYearByExpression((op) => op.Value < 0);
 
         public static IEnumerable<Operation> GetOperationsForCurrentMonth() => _manager.GetOperations().Where(op => op.Date.Month == DateTime.Now.Month);
 

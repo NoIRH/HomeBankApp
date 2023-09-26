@@ -1,4 +1,5 @@
-﻿using HomeBankApp.Models;
+﻿using HomeBankApp.Contexts;
+using HomeBankApp.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -6,15 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HomeBankApp
+namespace HomeBankApp.Managers
 {
     public class DbManager
     {
-        public ApplicationContext Context { get; set; }
+       Contexts.ApplicationContext Context { get; set; }
 
-        public DbManager() 
+        public DbManager()
         {
-            Context = new ApplicationContext();
+            Context = new Contexts.ApplicationContext();
             Context.Database.EnsureCreated();
             Context.Users.Load();
             Context.Operations.Load();
@@ -23,7 +24,7 @@ namespace HomeBankApp
 
         private void CreateAdmin()
         {
-            if(Context.Users.FirstOrDefault(x =>x.Role == 0) == null)
+            if (Context.Users.FirstOrDefault(x => x.Role == 0) == null)
                 AddUser(new User { Name = "admin", Password = "admin", Role = 0 });
         }
 

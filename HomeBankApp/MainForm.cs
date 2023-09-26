@@ -1,4 +1,5 @@
 
+using HomeBankApp.Managers;
 using ScottPlot;
 
 namespace HomeBankApp
