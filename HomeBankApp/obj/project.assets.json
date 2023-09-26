@@ -1409,23 +1409,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\demin\\.nuget\\packages\\": {},
+    "C:\\Users\\kikut\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\MyApps\\c#\\HomeBankApp\\HomeBankApp\\HomeBankApp.csproj",
+      "projectUniqueName": "D:\\Work\\University\\Programms\\CSharp\\HomeBankApp\\HomeBankApp\\HomeBankApp.csproj",
       "projectName": "HomeBankApp",
-      "projectPath": "C:\\MyApps\\c#\\HomeBankApp\\HomeBankApp\\HomeBankApp.csproj",
-      "packagesPath": "C:\\Users\\demin\\.nuget\\packages\\",
-      "outputPath": "C:\\MyApps\\c#\\HomeBankApp\\HomeBankApp\\obj\\",
+      "projectPath": "D:\\Work\\University\\Programms\\CSharp\\HomeBankApp\\HomeBankApp\\HomeBankApp.csproj",
+      "packagesPath": "C:\\Users\\kikut\\.nuget\\packages\\",
+      "outputPath": "D:\\Work\\University\\Programms\\CSharp\\HomeBankApp\\HomeBankApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\demin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kikut\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1481,7 +1481,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

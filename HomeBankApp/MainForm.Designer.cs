@@ -89,11 +89,11 @@
             // tabPage1
             // 
             tabPage1.Controls.Add(tableLayoutPanel1);
-            tabPage1.Location = new Point(4, 37);
+            tabPage1.Location = new Point(4, 30);
             tabPage1.Margin = new Padding(4);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(4);
-            tabPage1.Size = new Size(880, 490);
+            tabPage1.Size = new Size(880, 497);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Счёт";
             tabPage1.UseVisualStyleBackColor = true;
@@ -110,7 +110,7 @@
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 130F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            tableLayoutPanel1.Size = new Size(872, 482);
+            tableLayoutPanel1.Size = new Size(872, 489);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // dataGridViewOpeartions
@@ -194,7 +194,7 @@
             outPutFirld.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             outPutFirld.Location = new Point(19, 50);
             outPutFirld.Name = "outPutFirld";
-            outPutFirld.Size = new Size(242, 42);
+            outPutFirld.Size = new Size(242, 35);
             outPutFirld.TabIndex = 0;
             // 
             // groupBoxInput
@@ -216,7 +216,7 @@
             inputField.Location = new Point(15, 50);
             inputField.Maximum = new decimal(new int[] { 1215752192, 23, 0, 0 });
             inputField.Name = "inputField";
-            inputField.Size = new Size(240, 42);
+            inputField.Size = new Size(240, 35);
             inputField.TabIndex = 0;
             // 
             // groupBoxOperation
@@ -255,11 +255,11 @@
             // tabPage2
             // 
             tabPage2.Controls.Add(tableLayoutPanel3);
-            tabPage2.Location = new Point(4, 37);
+            tabPage2.Location = new Point(4, 30);
             tabPage2.Margin = new Padding(4);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(4);
-            tabPage2.Size = new Size(880, 490);
+            tabPage2.Size = new Size(880, 497);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Статистика";
             tabPage2.UseVisualStyleBackColor = true;
@@ -277,7 +277,7 @@
             tableLayoutPanel3.RowCount = 2;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 90F));
-            tableLayoutPanel3.Size = new Size(872, 482);
+            tableLayoutPanel3.Size = new Size(872, 489);
             tableLayoutPanel3.TabIndex = 0;
             // 
             // buttonYearStatistic
@@ -297,7 +297,7 @@
             plotField.Location = new Point(5, 52);
             plotField.Margin = new Padding(5, 4, 5, 4);
             plotField.Name = "plotField";
-            plotField.Size = new Size(862, 426);
+            plotField.Size = new Size(862, 433);
             plotField.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -353,7 +353,7 @@
             textBox1.Enabled = false;
             textBox1.Location = new Point(6, 40);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(391, 27);
+            textBox1.Size = new Size(391, 23);
             textBox1.TabIndex = 0;
             // 
             // groupBox2
@@ -374,7 +374,7 @@
             numericUpDown1.Location = new Point(6, 41);
             numericUpDown1.Maximum = new decimal(new int[] { 1215752192, 23, 0, 0 });
             numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(655, 27);
+            numericUpDown1.Size = new Size(655, 23);
             numericUpDown1.TabIndex = 0;
             // 
             // groupBox3
@@ -389,7 +389,7 @@
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(11F, 28F);
+            AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(888, 531);
