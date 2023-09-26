@@ -1,7 +1,7 @@
 ﻿using HomeBankApp.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace HomeBankApp
+namespace HomeBankApp.Contexts
 {
     public class ApplicationContext : DbContext
     {
