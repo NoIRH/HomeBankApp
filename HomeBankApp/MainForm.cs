@@ -60,6 +60,7 @@ namespace HomeBankApp
             var positiveDate = ManagerOperation.
                 GetOperationsForCurrentYearPositive().
                 Select(x => new DateTime(DateTime.Now.Year, x.monthNumber, 1).ToOADate()).ToArray();
+            if (negative == null || negativeDate == null || positive == null || positiveDate == null) return;
             plotField.Plot.AddScatter(negativeDate, negative);
             plotField.Plot.AddScatter(positiveDate, positive);
             plotField.Plot.XAxis.DateTimeFormat(true);
