@@ -7,9 +7,10 @@ namespace HomeBankApp.Contexts
     {
         public DbSet<User> Users { get; set; } = null!;
         public DbSet<Operation> Operations { get; set; } = null!;
+        public string Path { get; set; } = "Data Source = homebank.db";
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=homebank.db");
+            optionsBuilder.UseSqlite(Path);
         }
     }
 }
