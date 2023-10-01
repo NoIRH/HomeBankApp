@@ -12,12 +12,17 @@ namespace HomeBankApp.Managers
     public class FileStorageManager : IDataStorageManager
     {
         public FileContext Context { get; set; }
+        public string Path { get; set; } = "storage.json";
         public FileStorageManager() 
         {
-            Context = new FileContext();
-            // open o create file
-            
+            Context = JsonConverter.Deserialize(Path);
+            SetStateDefault();
             CreateAdmin();
+        }
+        private void SetStateDefault()
+        {
+            if (Context.Users == null) Context.Users = new List<User>();
+            if (Context.Operations == null) Context.Operations = new List<Operation>();
         }
         private void CreateAdmin()
         {
@@ -59,7 +64,7 @@ namespace HomeBankApp.Managers
 
         public void SaveChanges()
         {
-            // wait serializator 
+            JsonConverter.Serialize(Context,Path);
         }
     }
 }

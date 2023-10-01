@@ -17,10 +17,23 @@ namespace HomeBankApp
 
         public static FileContext Deserialize(string path)
         {
-            using (FileStream fs = new FileStream(path, FileMode.Open))
+            var result = new FileContext();
+            try
             {
-                return JsonSerializer.Deserialize<FileContext>(fs);
+                using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate)) 
+                    result = JsonSerializer.Deserialize<FileContext>(fs);
+                
+                return result;
             }
+            catch(Exception e)
+            {
+                Serialize(new FileContext(), path);
+                using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
+                    result = JsonSerializer.Deserialize<FileContext>(fs);
+                return result;
+            }
+                 
+            
         }
     }
 }
