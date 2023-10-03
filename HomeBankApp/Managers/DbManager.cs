@@ -13,10 +13,12 @@ namespace HomeBankApp.Managers
     public class DbManager : IDataStorageManager
     {
        Contexts.ApplicationContext Context { get; set; }
+        public string Path { get; set; } = "Data Source=homebank.db";
 
         public DbManager()
         {
             Context = new Contexts.ApplicationContext();
+            Context.Path = Path;
             Context.Database.EnsureCreated();
             Context.Users.Load();
             Context.Operations.Load();

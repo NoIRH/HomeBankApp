@@ -1,11 +1,20 @@
-﻿using HomeBankApp.Models;
+﻿using HomeBankApp.Interfaces;
+using HomeBankApp.Models;
 
 namespace HomeBankApp.Managers
 {
     public static class ManagerOperation
     {
-        private static DbManager _manager = new DbManager();
-
+        private static IDataStorageManager _manager;
+        public static IDataStorageManager Manager
+        {
+            get { return _manager; }
+            set { _manager = value; }
+        }
+        static ManagerOperation() 
+        {
+            Manager = new DbManager();
+        }
         private static List<(int monthNumber, double sumOfMonth)> GetOperationsForCurrentYearByExpression(Predicate<Operation> expression)
         {
             if (expression == null) throw new NullReferenceException("Expression is null");
