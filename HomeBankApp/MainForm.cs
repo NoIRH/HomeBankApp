@@ -1,17 +1,17 @@
 
-using HomeBankApp.Contexts;
 using HomeBankApp.Managers;
-using ScottPlot;
-using System.Text.Json;
+using HomeBankApp.Models;
 
 namespace HomeBankApp
 {
     public partial class MainForm : Form
     {
-        //комментарий от гоши
-        public MainForm()
+        private User _user;
+
+        public MainForm(User user)
         {
             InitializeComponent();
+            _user = user;
         }
 
         private void Form1_Load(object sender, EventArgs e)

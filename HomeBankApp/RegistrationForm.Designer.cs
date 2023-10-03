@@ -1,6 +1,6 @@
 ﻿namespace HomeBankApp
 {
-    partial class LoginForm
+    partial class RegistrationForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,8 +31,8 @@
             panel1 = new Panel();
             password = new TextBox();
             login = new TextBox();
-            registration = new Label();
-            buttonEnter = new Button();
+            authorization = new Label();
+            buttonRedistration = new Button();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
@@ -48,8 +48,8 @@
             panel1.BackColor = SystemColors.Control;
             panel1.Controls.Add(password);
             panel1.Controls.Add(login);
-            panel1.Controls.Add(registration);
-            panel1.Controls.Add(buttonEnter);
+            panel1.Controls.Add(authorization);
+            panel1.Controls.Add(buttonRedistration);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(panel2);
@@ -78,31 +78,31 @@
             login.Size = new Size(200, 33);
             login.TabIndex = 7;
             // 
-            // registration
+            // authorization
             // 
-            registration.AutoSize = true;
-            registration.Cursor = Cursors.Hand;
-            registration.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            registration.Location = new Point(179, 334);
-            registration.Name = "registration";
-            registration.Size = new Size(151, 20);
-            registration.TabIndex = 6;
-            registration.Text = "Зарегистрироваться";
-            registration.MouseClick += Registrable_MouseClick;
-            registration.MouseEnter += Registrlable_MouseEnter;
-            registration.MouseLeave += Registrlable_MouseLeave;
+            authorization.AutoSize = true;
+            authorization.Cursor = Cursors.Hand;
+            authorization.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            authorization.Location = new Point(198, 332);
+            authorization.Name = "authorization";
+            authorization.Size = new Size(121, 20);
+            authorization.TabIndex = 6;
+            authorization.Text = "Авторизоваться";
+            authorization.MouseClick += authorization_MouseClick;
+            authorization.MouseEnter += authorization_MouseEnter;
+            authorization.MouseLeave += authorization_MouseLeave;
             // 
-            // buttonEnter
+            // buttonRedistration
             // 
-            buttonEnter.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonEnter.Location = new Point(157, 253);
-            buttonEnter.Margin = new Padding(3, 2, 3, 2);
-            buttonEnter.Name = "buttonEnter";
-            buttonEnter.Size = new Size(200, 35);
-            buttonEnter.TabIndex = 5;
-            buttonEnter.Text = "Войти";
-            buttonEnter.UseVisualStyleBackColor = true;
-            buttonEnter.Click += buttonEnter_Click;
+            buttonRedistration.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonRedistration.Location = new Point(157, 253);
+            buttonRedistration.Margin = new Padding(3, 2, 3, 2);
+            buttonRedistration.Name = "buttonRedistration";
+            buttonRedistration.Size = new Size(200, 35);
+            buttonRedistration.TabIndex = 5;
+            buttonRedistration.Text = "Зарегистрироваться";
+            buttonRedistration.UseVisualStyleBackColor = true;
+            buttonRedistration.Click += buttonRedistration_Click;
             // 
             // pictureBox2
             // 
@@ -143,11 +143,11 @@
             label1.Font = new Font("Arial Narrow", 36F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(128, 23);
             label1.Name = "label1";
-            label1.Size = new Size(262, 57);
+            label1.Size = new Size(257, 57);
             label1.TabIndex = 0;
-            label1.Text = "Авторизация";
+            label1.Text = "Регистрация";
             // 
-            // LoginForm
+            // RegistrationForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -155,7 +155,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 2, 3, 2);
-            Name = "LoginForm";
+            Name = "RegistrationForm";
             Text = "LoginForm";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -171,10 +171,10 @@
         private Panel panel1;
         private Panel panel2;
         private Label label1;
-        private Button buttonEnter;
+        private Button buttonRedistration;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
-        private Label registration;
+        private Label authorization;
         private TextBox password;
         private TextBox login;
     }
