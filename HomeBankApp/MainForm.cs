@@ -16,8 +16,8 @@ namespace HomeBankApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ManagerOperation.Manager = new DbManager();
             inputField.Controls[0].Visible = false;
+            nameUser.Text = _user.Name;
             UpdateView();
         }
 

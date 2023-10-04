@@ -157,6 +157,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "LoginForm";
             Text = "LoginForm";
+            Load += LoginForm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

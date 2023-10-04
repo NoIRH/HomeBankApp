@@ -13,11 +13,6 @@ namespace HomeBankApp.Managers
             set { _manager = value; }
         }
 
-        static ManagerOperation() 
-        {
-            Manager = new DbManager();
-        }
-
         private static List<(int monthNumber, double sumOfMonth)> GetOperationsForCurrentYearByExpression(Predicate<Operation> expression)
         {
             if (expression == null) throw new NullReferenceException("Expression is null");

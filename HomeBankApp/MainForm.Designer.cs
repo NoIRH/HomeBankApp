@@ -57,6 +57,7 @@
             groupBox2 = new GroupBox();
             numericUpDown1 = new NumericUpDown();
             groupBox3 = new GroupBox();
+            nameUser = new Label();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
@@ -255,11 +256,11 @@
             // tabPage2
             // 
             tabPage2.Controls.Add(tableLayoutPanel3);
-            tabPage2.Location = new Point(4, 30);
+            tabPage2.Location = new Point(4, 24);
             tabPage2.Margin = new Padding(4);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(4);
-            tabPage2.Size = new Size(880, 497);
+            tabPage2.Size = new Size(880, 503);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Статистика";
             tabPage2.UseVisualStyleBackColor = true;
@@ -277,7 +278,7 @@
             tableLayoutPanel3.RowCount = 2;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 90F));
-            tableLayoutPanel3.Size = new Size(872, 489);
+            tableLayoutPanel3.Size = new Size(872, 495);
             tableLayoutPanel3.TabIndex = 0;
             // 
             // buttonYearStatistic
@@ -285,7 +286,7 @@
             buttonYearStatistic.Dock = DockStyle.Left;
             buttonYearStatistic.Location = new Point(3, 3);
             buttonYearStatistic.Name = "buttonYearStatistic";
-            buttonYearStatistic.Size = new Size(224, 42);
+            buttonYearStatistic.Size = new Size(224, 43);
             buttonYearStatistic.TabIndex = 0;
             buttonYearStatistic.Text = "Текущий год";
             buttonYearStatistic.UseVisualStyleBackColor = true;
@@ -294,10 +295,10 @@
             // plotField
             // 
             plotField.Dock = DockStyle.Fill;
-            plotField.Location = new Point(5, 52);
+            plotField.Location = new Point(5, 53);
             plotField.Margin = new Padding(5, 4, 5, 4);
             plotField.Name = "plotField";
-            plotField.Size = new Size(862, 433);
+            plotField.Size = new Size(862, 438);
             plotField.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -387,12 +388,23 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Операции";
             // 
+            // nameUser
+            // 
+            nameUser.AutoSize = true;
+            nameUser.Dock = DockStyle.Right;
+            nameUser.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            nameUser.Location = new Point(888, 0);
+            nameUser.Name = "nameUser";
+            nameUser.Size = new Size(0, 25);
+            nameUser.TabIndex = 10;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(888, 531);
+            Controls.Add(nameUser);
             Controls.Add(tabControl1);
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             Margin = new Padding(4, 3, 4, 3);
@@ -418,6 +430,7 @@
             groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -448,5 +461,6 @@
         private GroupBox groupBoxOperation;
         private Button buttonRemoveMoney;
         private Button buttonAddMoney;
+        private Label nameUser;
     }
 }

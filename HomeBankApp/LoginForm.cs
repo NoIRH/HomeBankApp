@@ -29,7 +29,7 @@ namespace HomeBankApp
         private void buttonEnter_Click(object sender, EventArgs e)
         {
             var user = AuthRegManager.Authorize(login.Text, password.Text);
-            if(user == null) 
+            if (user == null)
             {
                 MessageBox.Show("Неверный логин или пороль, возможно вам стоит зарегестрироваться!");
                 return;
@@ -37,6 +37,11 @@ namespace HomeBankApp
             Hide();
             new MainForm(user).ShowDialog();
             Close();
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            ManagerOperation.Manager = new DbManager();
         }
     }
 }
