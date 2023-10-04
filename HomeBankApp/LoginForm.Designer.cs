@@ -94,7 +94,7 @@
             // 
             // buttonEnter
             // 
-            buttonEnter.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonEnter.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonEnter.Location = new Point(157, 253);
             buttonEnter.Margin = new Padding(3, 2, 3, 2);
             buttonEnter.Name = "buttonEnter";
@@ -156,7 +156,6 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 2, 3, 2);
             Name = "LoginForm";
-            Text = "LoginForm";
             Load += LoginForm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

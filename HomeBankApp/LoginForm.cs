@@ -18,12 +18,12 @@ namespace HomeBankApp
 
         private void Registrlable_MouseEnter(object sender, EventArgs e)
         {
-            registration.ForeColor = Color.White;
+            registration.ForeColor = SystemColors.Highlight;
         }
 
         private void Registrlable_MouseLeave(object sender, EventArgs e)
         {
-            registration.ForeColor = Color.Black;
+            registration.ForeColor = SystemColors.ControlText;
         }
 
         private void buttonEnter_Click(object sender, EventArgs e)

@@ -1,5 +1,4 @@
-﻿
-using HomeBankApp.Managers;
+﻿using HomeBankApp.Managers;
 
 namespace HomeBankApp
 {
@@ -17,17 +16,17 @@ namespace HomeBankApp
 
         private void authorization_MouseEnter(object sender, EventArgs e)
         {
-            authorization.ForeColor = Color.White;
+            authorization.ForeColor = SystemColors.Highlight;
         }
 
         private void authorization_MouseLeave(object sender, EventArgs e)
         {
-            authorization.ForeColor = Color.Black;
+            authorization.ForeColor = SystemColors.ControlText;
         }
 
         private void buttonRedistration_Click(object sender, EventArgs e)
         {
-            if (AuthRegManager.Authorize(login.Text, password.Text) != null) 
+            if (AuthRegManager.Authorize(login.Text, password.Text) != null)
             {
                 MessageBox.Show("Такой пользователь уже есть!");
                 return;

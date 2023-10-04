@@ -81,8 +81,10 @@
             // authorization
             // 
             authorization.AutoSize = true;
+            authorization.BackColor = SystemColors.Control;
             authorization.Cursor = Cursors.Hand;
             authorization.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            authorization.ForeColor = SystemColors.ControlText;
             authorization.Location = new Point(198, 332);
             authorization.Name = "authorization";
             authorization.Size = new Size(121, 20);
@@ -94,7 +96,7 @@
             // 
             // buttonRedistration
             // 
-            buttonRedistration.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonRedistration.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonRedistration.Location = new Point(157, 253);
             buttonRedistration.Margin = new Padding(3, 2, 3, 2);
             buttonRedistration.Name = "buttonRedistration";
@@ -156,7 +158,6 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 2, 3, 2);
             Name = "RegistrationForm";
-            Text = "LoginForm";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
