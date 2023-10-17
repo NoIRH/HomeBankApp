@@ -15,6 +15,7 @@ namespace HomeBankApp.Managers
 
         private static List<(int monthNumber, double sumOfMonth)> GetOperationsForCurrentYearByExpression(Predicate<Operation> expression)
         {
+            //добавь зависимость от юзера.
             if (expression == null) throw new NullReferenceException("Expression is null");
             int startMonth = _manager.GetMinDate().Month - 1; // Range from 0 to 11.
             int numberOfMonths = 12;
